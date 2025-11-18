@@ -1,0 +1,130 @@
+.responsive-calendar-section {
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+}
+.responsive-calendar-wrapper {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 36px;
+  box-sizing: border-box;
+}
+
+.fc {
+  font-size: 0.92rem;
+}
+.fc-daygrid-day {
+  min-width: 32px;
+  min-height: 32px;
+  padding: 0;
+}
+.fc-daygrid-day-number {
+  font-size: 0.95em;
+  padding: 0 2px;
+}
+.fc-daygrid-day-events {
+  margin-top: 1px;
+}
+.fc-scrollgrid {
+  min-width: 100%;
+  overflow-x: auto;
+}
+.fc-daygrid {
+  min-width: 100%;
+  overflow-x: auto;
+}
+.fc-daygrid-body {
+  min-width: 100%;
+  overflow-x: auto;
+}
+.fc-daygrid-day-frame {
+  min-height: 38px;
+}
+
+@media (max-width: 700px) {
+  .fc {
+    font-size: 0.82rem;
+  }
+  .fc-daygrid-day {
+    min-width: 24px;
+    min-height: 24px;
+  }
+  .fc-daygrid-day-number {
+    font-size: 0.85em;
+  }
+}
+.calendar-event-shift-0 {
+  background: #ffebad !important;
+  color: #222 !important;
+}
+.calendar-event-shift-0 .fc-event-main,
+.calendar-event-shift-0 .fc-event-title {
+  color: #222 !important;
+}
+.calendar-event-shift-1 {
+  background: navy !important;
+  color: #fff !important;
+}
+.calendar-event-shift-2 {
+  background: #fdffb6 !important;
+  color: #222 !important;
+}
+.calendar-event-shift-3 {
+  background: #caffbf !important;
+  color: #222 !important;
+}
+.calendar-event-shift-4 {
+  background: #9bf6ff !important;
+  color: #222 !important;
+}
+.calendar-event-staff-0 {
+  border: 2px solid #ff6392 !important;
+}
+.calendar-event-staff-1 {
+  border: 2px solid #36c9c6 !important;
+}
+.calendar-event-staff-2 {
+  border: 2px solid #f6d743 !important;
+}
+.calendar-event-staff-3 {
+  border: 2px solid #6a4cff !important;
+}
+.calendar-event-staff-4 {
+  border: 2px solid #ffb700 !important;
+}
+
+.fc-event {
+  cursor: pointer;
+}
+
+.event-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.2);
+  padding: 24px 32px;
+  z-index: 9999;
+  min-width: 320px;
+  max-width: 90vw;
+}
+.event-popup h3 {
+  margin-top: 0;
+}
+.event-popup .close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.event-popup .event-detail-row {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}

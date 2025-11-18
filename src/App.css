@@ -1,0 +1,15 @@
+:root {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #f9f9f9;
+  padding: 10px 100px;
+}
+
+/* Mobilde yan boşlukları azalt */
+@media (max-width: 768px) {
+  :root {
+    padding: 2px 4px;
+  }
+}
