@@ -1,49 +1,74 @@
-# React Project - 2025
+# Shift Yönetimi Çözümü – Tamamlanmış Task
 
-Merhaba, bu projede sizden belirtilen hataların giderilmesi ve yeni özelliklerin uygulamaya eklenmesi beklenmektedir.
+Bu depo, verilen **Shift Yönetimi** (Shift Management) frontend task'ının tamamlanmış çözümünü içermektedir.
 
-## 📦 Kurulum ve Başlatma Adımları
+Projede **takvim görünümü**, **modal yapısı** ile shift detay gösterimi ve **shift güncelleme akışı** sorunsuz şekilde uygulanmıştır. Kod yapısı **modüler**, **okunabilir** ve **edge-case** senaryolarına karşı güvenlidir.
 
-Projeyi çalıştırmak için aşağıdaki adımları takip edin:
+---
 
-```sh
-npm install --legacy-peer-deps
-npm run dev
+## 🚀 Özellikler
+
+- 📅 **Aylık takvim görünümü**
+- 🟦 **Modal** ile shift detay gösterimi
+- 🔄 **Shift güncelleme** akışı ve **form yapısı**
+- ⚠️ Boş veya hatalı veri durumları için **edge-case kontrolleri**
+- ♻️ **Temiz** ve **modüler component mimarisi**
+- 📱 **Responsive tasarım** desteği
+- 🔌 **API yapısına uygun veri işleme** fonksiyonları
+
+---
+
+## 🛠️ Kullanılan Teknolojiler
+
+- **React** / **Next.js**
+- **Bootstrap** veya **SCSS** (Stil Yönetimi)
+- **Axios** (API İstekleri)
+- **Context API** veya **Redux Toolkit** (Global Durum Yönetimi)
+- **React Icons**
+
+---
+
+## 📦 Kurulum
+
+Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları takip edin:
+
+```bash
+git clone <this-repo-link> # Depoyu klonlayın
+cd project-folder         # Proje dizinine gidin
+npm install               # Bağımlılıkları yükleyin
+npm run dev               # Geliştirme sunucusunu başlatın
 ```
 
-## 🐞 Hata Düzeltmeleri ve 📌 İstekler
+Ardından tarayıcıdan:
 
-**1. ProfileCard Bileşeni – Rol Gösterimi** (15P)
-- Sorun: Kullanıcı profili henüz yüklenmemişken, ProfileCard bileşeninde role alanı gösterilemiyor.
+http://localhost:3000 adresine gidin.
 
-- Beklenen Davranış: Eğer state üzerinden profil datası henüz gelmemişse, localStorage içindeki role bilgisi kullanılmalı ve düzgün şekilde ekranda gösterilmelidir. Uygulama bu durumda hata vermemelidir.
+📸 Ekran Görüntüleri
 
-**2. Calendar Bug ve Event Detayı** (25P)
-- Sorun: projede CalendarContainer içerisindeki bir takım mantık ve değişkenlerin kullanım hatalarından dolayı eventler calendarda render olamıyor.
+📅 Takvim Görünümü
+![Preview](./screenshots/calendar.png)
 
-- Beklenen Davranış: Bütün eventler yani assignmentlar takvimde görüntülenmeli ve bu görüntüleme seçili staff üzerindem olmalıdır.
+Aylık shift takviminin temel görünümü:
 
-- Takvim üzerindeki eventlerin her biri kendine özel bir renk ile highlight edilmelidir. Bu renklendirme shift ve staff bazlı olmalıdır. Ek olarak, takvimdeki bir etkinliğe tıklandığında bir pop-up açılarak, ilgili etkinliğe ait personel adı, vardiya adı, tarih, başlangıç ve bitiş saatleri gibi tüm bilgilerin görüntülenmesi beklenmektedir.
+🟦 Modal Yapısı
+![Preview](./screenshots/modal.png)
 
-**4. Pair Günlerinin Altını Çizme** (25P)
-- Sorun: highlightedPair sınıfı tüm günlere uygulandığı için takvimdeki bütün günlerin altı çizili görünmekte.
+Gün detayına tıklanınca açılan modal ekranı:
 
-- Beklenen Davranış: Her personelin sahip olduğu pair listesi, o personelin başka bir personelle birlikte çalıştığı tarih aralıklarını belirtmektedir. Takvimde, seçili personelin bu tarih aralıklarına denk gelen günleri (pair günleri), highlightedPair sınıfı ile altı çizili olarak gösterilmelidir. Diğer günler normal şekilde görünmelidir.
+🔄 Shift Update
+![Preview](./screenshots/shiftupdate.png)
 
-- Ek olarak beklenen davranış, her pair’in takvimde kendi rengiyle temsil edilmesidir. Yani, takvimde tıklanabilir durumda olan her personel farklı bir renkte gösterilmelidir. Örneğin, Tuba seçili personel ise ve 14. gün Esra ile bir pair oluşturuyorsa, Esra'nın rengi kırmızıysa, ayın 14'ü kırmızı alt çizgiyle vurgulanmalıdır.
+Shift güncelleme formu ve güncelleme akışı:
 
-**5. Takvimde Sürükle-Bırak ile Event Güncelleme** (25P)
-- Beklenen Davranış: Takvimdeki bir etkinlik sürüklenerek günü değiştirildiğinde, bu değişiklik state/redux verisine yansıtılmalıdır yani selector ile redux üzerinden çekilen schedule verisine işlenilmelidir. Bu işlemlerin, ilgili bileşen içinde ve projenin store klasörü altında gerçekleştirilmesi gerekmektedir. (25P)
+🧩 Ek Yapılan İyileştirmeler
+Component mimarisi sadeleştirildi ve tekrar kullanılabilir şekilde düzenlendi.
 
-**6. Tasarım Güncellemeleri** (10P + Ekstra)
-- Beklenti: Mevcut bileşenlerin görsel ve yapısal tasarımları elinizdeki verilere uygun şekilde iyileştirilmeli ve modern, kullanıcı dostu bir arayüz haline getirilmelidir.
+UI tutarlılığı için ince görsel iyileştirmeler yapıldı.
 
-#
----
-#
- 
-📝 **Öneri**: Kullanıcı deneyimini artıracak şekilde yeniden düzenlemeler yapabilir, component hiyerarşisini sadeleştirebilir ve UI/UX anlamında profesyonel dokunuşlar ekleyebilirsiniz.
+API hataları, boş gün veya boş shift listesi gibi edge-case senaryoları ele alındı.
 
-**Her geliştirme adımında kodun okunabilirliğine, performansına ve bileşenlerin yeniden kullanılabilirliğine dikkat edilmesi beklenmektedir.Proje ile ilgili sorularınızı info@smart-maple.com adresine iletebilirsiniz.**
+Kod okunabilirliği artırılarak mantıksal yapılar ayrıştırıldı.
 
-✨ Teşekkürler!
+Mobil uyumluluk geliştirildi ve responsive düzenler optimize edildi.
+
+Görkem Paşaoğlu
